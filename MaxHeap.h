@@ -6,6 +6,24 @@
 
 using namespace std;
 
+/**
+* Max Heap
+*
+* The type of the key has to be an integer and the data is templated so
+* that any type that supports copy constructor is legitimate.
+* the heap is implemented using an expandable array.
+*
+* The following functions are available:
+*
+* MaxHeap()         - a default c'tor with an optional of recieving an initial size as argument.
+* insert(key, data) - arguments are the key and data that will be inserted to the heap.
+* contains(key)     - returns true if the given key is already in the heap.
+* getMax()          - returns the pair that represents the greatest key.
+                      returns a pair with -1 as first value if the heap is empty
+* delMax()          - returns True if the max element was deleted successfully or False otherwise.
+*
+*/
+
 template<class T>
 class MaxHeap{
     static const int INIT_SIZE = 10;
@@ -26,7 +44,7 @@ public:
     void insert(int key, T data);
     bool contains(int key) const;
     pair<int,T> getMax() const;
-    bool popMax();
+    bool delMax();
 };
 
 template<class T>
@@ -62,8 +80,6 @@ void MaxHeap<T>::insert(int key, T data){
         expand();
     }
     heap[curr_size] = pair<int,T>(key, data);
-    
-    // int curr = curr_size;
     siftUp(curr_size);
     curr_size++;
 }
@@ -141,7 +157,7 @@ pair<int,T> MaxHeap<T>::getMax() const{
 }
 
 template<class T>
-bool MaxHeap<T>::popMax(){
+bool MaxHeap<T>::delMax(){
     if(curr_size == 0){
         return false;
     }
@@ -150,4 +166,7 @@ bool MaxHeap<T>::popMax(){
     siftDown(0);
     return true;
 }
+
+
+
 

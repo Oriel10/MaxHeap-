@@ -9,8 +9,8 @@ int main(){
     names.insert(58,"Roni");
     names.insert(55,"Adina");
     names.insert(24,"Tal");
-    names.insert(1,"Fury");
-    names.insert(1,"Oscar");
+    names.insert(1,"Adam");
+    names.insert(1,"Narkis");
     names.insert(59,"Sonia");
     names.insert(8,"Izik");
     names.insert(6,"Dani");
@@ -19,28 +19,30 @@ int main(){
     cout<<names.heap.size()<<endl;
     cout<<(names.contains(1) ? "True" : "false")<<endl;
     cout<<names.getMax().second<<", age: "<<names.getMax().first<<endl;
-    names.popMax();
+    names.delMax();
     cout<<names.getMax().second<<", age: "<<names.getMax().first<<endl;
-    names.popMax();
+    names.delMax();
     cout<<names.getMax().second<<", age: "<<names.getMax().first<<endl;
-    names.popMax();
+    names.delMax();
     cout<<names.getMax().second<<", age: "<<names.getMax().first<<endl;
-    names.popMax();
+    names.delMax();
     cout<<names.getMax().second<<", age: "<<names.getMax().first<<endl;
-    names.popMax();
+    names.delMax();
     cout<<names.getMax().second<<", age: "<<names.getMax().first<<endl;
-    names.popMax();
+    names.delMax();
     cout<<names.getMax().second<<", age: "<<names.getMax().first<<endl;
-    names.popMax();
+    names.delMax();
     cout<<names.getMax().second<<", age: "<<names.getMax().first<<endl;
-    names.popMax();
+    names.delMax();
     cout<<names.getMax().second<<", age: "<<names.getMax().first<<endl;
-    names.popMax();
+    names.delMax();
     cout<<names.getMax().second<<", age: "<<names.getMax().first<<endl;
-    names.popMax();
+    names.delMax();
     cout<<names.getMax().second<<", age: "<<names.getMax().first<<endl;
-    names.popMax();
+    names.delMax();
     cout<<names.getMax().second<<", age: "<<names.getMax().first<<endl;
-    names.popMax();
+    names.delMax();
+    cout<<(names.delMax() ? "heap is not empty" : "heap is empty as expected")<<endl;
+    
     
 }
