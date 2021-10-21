@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/user/Desktop/git projects/MaxHeap-/MaxHeap.h
+iostream
+-
+vector
+-
+string
+-
+utility
+-
+
+C:/Users/user/Desktop/git projects/MaxHeap-/main.cpp
+iostream
+-
+MaxHeap.h
+C:/Users/user/Desktop/git projects/MaxHeap-/MaxHeap.h
+
