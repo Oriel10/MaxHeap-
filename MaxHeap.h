@@ -45,12 +45,15 @@ public:
     bool contains(int key) const;
     pair<int,T> getMax() const;
     bool delMax();
+    int getSize() const;
+    bool isEmpty() const;
 };
 
 template<class T>
 int MaxHeap<T>::parent(int pos) const{
     return (pos-1)/2;
 }
+
 
 template<class T>
 int MaxHeap<T>::leftChild(int pos) const{
@@ -152,7 +155,7 @@ bool MaxHeap<T>::contains(int key) const{
 
 template<class T>
 pair<int,T> MaxHeap<T>::getMax() const{
-    pair<int,T> empty(-1,"heap is empty");
+    pair<int,T> empty(-1,T());
     return curr_size!=0 ? heap[0] : empty;
 }
 
@@ -167,6 +170,15 @@ bool MaxHeap<T>::delMax(){
     return true;
 }
 
+template<class T>
+int MaxHeap<T>::getSize() const{
+    return curr_size;
+}
+
+template<class T>
+bool MaxHeap<T>::isEmpty() const{
+    return curr_size == 0;
+}
 
 
 
